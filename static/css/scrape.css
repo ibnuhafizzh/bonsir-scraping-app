@@ -121,7 +121,6 @@ li {
     border-radius: 5px; /* Match input box corners */
     font-size: 24px; /* Larger font size for visibility */
     cursor: pointer;
-    margin: 10px 0;
 }
 
 .icon-button:hover {
