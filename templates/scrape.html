@@ -13,6 +13,7 @@
     <h1>Enter Company Names</h1>
     
     <div class="container">
+
         <form action="/scrape" method="POST">
             <div id="input-fields">
                 <div class="input-group">
@@ -22,7 +23,7 @@
             </div>
             
             <button id="add-field" class="icon-button">+</button>
-            <button id="generate-and-sort" type="submit">Generate & Sort</button>
+            <button id="generate-and-sort" type="submit">Check Exposure</button>
         </form>
 
         {% if sorted_companies %}

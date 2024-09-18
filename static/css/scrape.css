@@ -3,17 +3,20 @@ body {
     background-color: #f4f4f4;
     text-align: center;
     margin-top: 50px;
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/dark-paths.png');
+    background-repeat: repeat;
+    background-size: auto;
 }
 
 .container {
     display: inline-block;
-    text-align: left;
-    width: 300px;
+    text-align: center;
+    width: 700px;
 }
 
-h1 {
-    color: #333;
-    margin-bottom: 20px;
+h1, h2{
+    color: #ffffff;
+    margin-top: 100px;
 }
 
 .input-group {
@@ -56,7 +59,7 @@ button {
     font-size: 16px;
     margin: 10px 0;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #21b3bd;
     color: white;
     border: none;
     border-radius: 5px;
@@ -64,7 +67,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #197b82;
 }
 
 ul {
