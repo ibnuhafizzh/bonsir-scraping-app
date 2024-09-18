@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container {
+    display: inline-block;
+    text-align: left;
+    width: 300px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-text {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Existing styles */
+
+.delete-field {
+    background-color: red;
+    color: white;
+    border: none;
+    width: 30px;        /* Set width to create a square */
+    height: 30px;       /* Set height to match the width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 5px; /* Optional: rounded corners */
+    font-size: 18px;    /* Adjust font size to fit inside the square */
+}
+
+.delete-field:hover {
+    background-color: darkred;
+}
+
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    background-color: #ddd;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.home-button {
+    position: absolute; /* Position it relative to the nearest positioned ancestor (body) */
+    top: 10px;          /* Distance from the top */
+    left: 10px;         /* Distance from the left */
+    background-color: #4c9eaf; /* Green background */
+    color: white;       /* White text */
+    padding: 10px 20px; /* Padding around the text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px;    /* Font size */
+}
+
+.home-button:hover {
+    background-color: #4598a0; /* Darker green on hover */
+}
+
+/* Input Box Styles */
+.input-text {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+/* Add Button Styles */
+.icon-button {
+    background-color: #f0f0f0; /* Match the input box background color */
+    color: #333; /* Match the input box text color */
+    border: 1px solid #ccc; /* Border color to match input box */
+    height: 30px; /* Fixed height to make it square */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px; /* Match input box corners */
+    font-size: 24px; /* Larger font size for visibility */
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.icon-button:hover {
+    background-color: #e0e0e0; /* Slightly darker on hover */
+}
