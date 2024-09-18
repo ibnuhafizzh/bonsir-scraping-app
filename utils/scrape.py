@@ -1,12 +1,11 @@
 import requests
-import json
 
-# Your API Key and Search Engine ID from Google
+# Your API Key and Search Engine ID
 API_KEY = 'AIzaSyDLXFLRFaYtefgZy_3BwX9ADHguKSLhs6s'  # Replace with your API key
 CX = '3495ed3f98c3e4196'  # Replace with your Custom Search Engine ID
 
 # Function to fetch search results from Google Custom Search API
-def google_search(company_name, api_key, cx, num_results=10):
+def google_search(company_name, api_key=API_KEY, cx=CX, num_results=10):
     search_url = f"https://www.googleapis.com/customsearch/v1"
     params = {
         'key': api_key,
@@ -21,7 +20,7 @@ def google_search(company_name, api_key, cx, num_results=10):
         return search_results
     else:
         print(f"Error: {response.status_code}")
-        return None
+        return "99"
 
 # Function to extract total search results (an indicator of company exposure)
 def extract_total_results(search_results):
@@ -31,30 +30,21 @@ def extract_total_results(search_results):
     except KeyError:
         return 0
 
-companies_example = {"Bank Mandiri", "Bank BCA", "Bank BRI"}
+# Function to scrape results for companies
 def scraping_result(companies):
-# List of companies to analyze
-    print(companies)
-    # Arrays to store company and its exposure (total search results)
     company_exposure = {}
-
-    # Iterate over each company and perform a search
     for company in companies:
-        company = '"'+company+'"'
-        search_results = google_search(company, API_KEY, CX)
+        company = '"' + company + '"'
+        search_results = google_search(company)
+        if search_results == "99":
+            print(f"Could not retrieve results for {company}")
+            return "99"
         if search_results:
             total_results = extract_total_results(search_results)
             company_exposure[company] = total_results
             print(f"{company}: {total_results} results found")
         else:
             print(f"Could not retrieve results for {company}")
-
-    # Sort companies (from highest to lowest)
+            return "99"
     sorted_exposure = sorted(company_exposure.items(), key=lambda x: x[1], reverse=True)
-
-    # Display sorted results
-    print("\nSorted Company:")
-    for company, exposure in sorted_exposure:
-        print(f"{company}: {exposure} results")
-
     return sorted_exposure

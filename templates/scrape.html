@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Exposure Sorter</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/scrape.css') }}">
+</head>
+<body>
+    <!-- Home Button -->
+    <a href="/" class="home-button">Home</a>
+    
+    <h1>Enter Company Names</h1>
+    
+    <div class="container">
+        <form action="/scrape" method="POST">
+            <div id="input-fields">
+                <div class="input-group">
+                    <input type="text" name="company[]" placeholder="Enter company name" class="input-text">
+                    <button class="delete-field">X</button>
+                </div>
+            </div>
+            
+            <button id="add-field" class="icon-button">+</button>
+            <button id="generate-and-sort" type="submit">Generate & Sort</button>
+        </form>
+
+        {% if sorted_companies %}
+            <h2>Sorted Company Exposure</h2>
+            <ul>
+                {% for company, exposure in sorted_companies %}
+                    <li>{{ company }}: {{ exposure }} results</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        {% if error %}
+            <p>Error Retrieve Data</p>
+        {% endif %}
+    </div>
+
+
+    <script src="{{ url_for('static', filename='js/scrape.js') }}"></script>
+</body>
+</html>
