@@ -1,12 +1,35 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    text-align: center;
-    margin-top: 50px;
+    color: #f4f4f4;
+    display: flex;
+    justify-content: center; /* Centers the container horizontally */
+    align-items: center; /* Centers the container vertically */
+    height: 100vh; /* Makes sure the body takes full viewport height */
+    margin: 0;
+    background-image: url('homepage.jpg');
+    background-size:cover; /* Scales image to cover the entire page */
+    background-repeat:no-repeat; /* Prevents image from repeating */
+    background-position:center; /* Centers the image */
 }
 
-h1 {
-    color: #333;
+.container {
+    /* width: inherit;
+    height: inherit; */
+    display: flex;
+    flex-direction: column; /* Aligns the elements vertically */
+    justify-content: center; /* Centers them vertically */
+    align-items: center; /* Centers them horizontally */
+    text-align: center; /* Ensures text is centered inside elements like <h1> and <a> */
+}
+.description{
+    margin-top: -8px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 button {
@@ -14,12 +37,12 @@ button {
     font-size: 16px;
     margin: 10px;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #21b3bd;
     color: white;
     border: none;
     border-radius: 5px;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #197b82;
 }

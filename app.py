@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-from utils.scraping import scraping_result
+from utils.scrape import scraping_result
 
 app = Flask(__name__)
 
@@ -11,24 +11,26 @@ def index():
 # Route for Menu A
 @app.route('/scraping')
 def menu_a():
-    return render_template('scraping.html')
+    return render_template('scrape.html')
 
 # Route for Menu B
 @app.route('/alfin')
 def menu_b():
     return render_template('alfin.html')
 
-@app.route('/scraping-generator', methods=['POST'])
-def scraping():
-    # Get the list and sorting order from the request
-    data = request.json
-    items = data.get('items', [])
+# Route to handle the form submission
+@app.route('/scrape', methods=['POST'])
+def scrape():
+    # Get user input from form
+    company_names = request.form.getlist('company[]')
 
-    # Sort the list using the imported function
-    result = scraping_result(items)
-    
-    # Return the sorted list as JSON
-    return jsonify({'sorted_items': result})
+    # Call scraping function
+    sorted_companies = scraping_result(company_names)
+
+    if (sorted_companies == "99"): 
+        return render_template('scrape.html', error=sorted_companies)
+    # Render the same template with sorted companies
+    return render_template('scrape.html', sorted_companies=sorted_companies)
 
 if __name__ == '__main__':
     app.run(debug=True)
