@@ -7,7 +7,7 @@ body {
     align-items: center; /* Centers the container vertically */
     height: 100vh; /* Makes sure the body takes full viewport height */
     margin: 0;
-    background-image: url('https://img.freepik.com/free-photo/navy-blue-smoky-art-abstract-background_53876-102669.jpg?w=1480&t=st=1726648137~exp=1726648737~hmac=efc311cf3657aee6b8ab9350a3327328f784f8cde78fef1160bd70028a448697');
+    background-image: url('homepage.jpg');
     background-size:cover; /* Scales image to cover the entire page */
     background-repeat:no-repeat; /* Prevents image from repeating */
     background-position:center; /* Centers the image */
