@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin-top: 50px;
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/dark-paths.png');
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+.container {
+    display: inline-block;
+    text-align: center;
+    width: 700px;
+}
+
+h1, h2 {
+    color: #ffffff;
+    margin-top: 100px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-text {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Giro-specific form styles */
+form {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 50px;
+}
+
+form label {
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+form input[type="text"], form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #21b3bd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background-color: #197b82;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    background-color: #ddd;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.home-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #4c9eaf;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.home-button:hover {
+    background-color: #4598a0;
+}
+
+/* Input Box Styles */
+.input-text {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+/* Add Button Styles */
+.icon-button {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.icon-button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Delete Button Styles */
+.delete-field {
+    background-color: red;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.delete-field:hover {
+    background-color: darkred;
+}
+
+/* Form Title */
+form h1 {
+    color: #ffffff;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
