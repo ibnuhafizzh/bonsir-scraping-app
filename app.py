@@ -50,5 +50,18 @@ def upload_scoring():
     # Mengirim file hasil ke pengguna
     return send_file(output_file_path, as_attachment=True)
 
+@app.route('/scrape', methods=['POST'])
+def scrape():
+    # Get user input from form
+    company_names = request.form.getlist('company[]')
+
+    # Call scraping function
+    sorted_companies = scraping_result(company_names)
+
+    if (sorted_companies == "99"): 
+        return render_template('scrape.html', error=sorted_companies)
+    # Render the same template with sorted companies
+    return render_template('scrape.html', sorted_companies=sorted_companies)
+
 if __name__ == '__main__':
     app.run(debug=True)
