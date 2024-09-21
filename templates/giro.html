@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Scoring</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/giro.css') }}">
+</head>
+<body>
+    <!-- Home Button -->
+    <a href="/" class="home-button">Home</a>
+    <h1>Customer Scoring</h1>
+    <form action="/upload_scoring" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        
+        <!-- Input untuk memasukkan nama sheet -->
+        <label for="sheet">Nama Sheet:</label>
+        <input type="text" name="sheet" id="sheet" placeholder="Masukkan nama sheet" required>
+        
+        <button type="submit">Upload dan Proses</button>
+    </form>
+
+</body>
+</html>
+
